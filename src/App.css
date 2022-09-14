@@ -78,7 +78,7 @@ body {
 
 
 .btn_style {
-  padding: 0.4rem 0.8rem;
+  padding: 1.4rem 0.8rem;
   background-color: rgb(107, 45, 116);
   outline: none;
   border: none;
@@ -86,7 +86,7 @@ body {
   font-size: 18px;
   cursor: pointer;
   border-radius: 3px;
-  margin-left: 1rem;
+
 }
 
 .btn_styl {
@@ -99,7 +99,7 @@ body {
   cursor: pointer;
   border-radius: 3px;
   margin-top: 6vh;
-  margin-left: 35vw;
+  margin-left: 36vw;
 }
 
 .btnContainer {

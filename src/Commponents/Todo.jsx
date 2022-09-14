@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import logo from '../image/Logo.png';
+import React, { useRef, useState } from 'react'
+import logo from '../image/checklist.gif';
 
 
 
@@ -15,6 +15,16 @@ const Todo = () => {
         const myprvItem = [...eachItem, inputVal]
         setEachItems(myprvItem)
         setInputVal("")
+    }
+
+    const name = useRef(null)
+
+    const UseRefe = () => {
+        if (!name.current.value) {
+            alert("plz fill the data")
+        } else {
+            handleclick()
+        }
     }
 
     const removeAll = () => {
@@ -40,10 +50,10 @@ const Todo = () => {
             <div className='text_div'><h2>My Todo App</h2></div>
 
             <div className='input_field'>
-                <input type="text" placeholder='AddItem' onChange={(e) => { setInputVal(e.target.value) }} autoComplete='off' value={inputVal} />
+                <input type="text" placeholder='AddItem' onChange={(e) => { setInputVal(e.target.value) }} autoComplete='off' value={inputVal} ref={name} />
 
                 <div className='btnContainer'>
-                    <button className='btn_style' onClick={handleclick}>Add</button>
+                    <button className='btn_style' onClick={UseRefe}>Add</button>
 
                 </div>
             </div>
